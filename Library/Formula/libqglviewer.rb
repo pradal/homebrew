@@ -2,8 +2,12 @@ require 'formula'
 
 class Libqglviewer < Formula
   homepage 'http://www.libqglviewer.com/'
-  url 'http://www.libqglviewer.com/src/libQGLViewer-2.3.16.tar.gz'
-  md5 'e5b358a5af2e8aeeab91021770b10211'
+=begin  
+    url 'http://www.libqglviewer.com/src/libQGLViewer-2.3.16.tar.gz'
+    md5 'e5b358a5af2e8aeeab91021770b10211'
+=end 
+  url   'https://gforge.inria.fr/frs/download.php/30459/libQGLViewer-2.3.15-py.tgz'
+  md5 '6c1958d6dbf9bdb49f40a5c4e367d345'
 
   depends_on 'qt'
 
