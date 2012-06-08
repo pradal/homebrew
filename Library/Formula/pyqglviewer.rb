@@ -2,8 +2,9 @@ require 'formula'
 
 class Pyqglviewer < Formula
   homepage 'http://pyqglviewer.gforge.inria.fr/'
-  url   'https://gforge.inria.fr/frs/download.php/30460/PyQGLViewer-0.10.tgz'
-  md5 '6ec8d8177739886fd21b9fd4392986e9'
+
+  url   'https://gforge.inria.fr/frs/download.php/30908/PyQGLViewer-0.11.zip'
+  md5   'cc7d847989fd6af9ac51736cec864e4b'
 
   depends_on 'pyqt'
   depends_on 'sip'
@@ -27,7 +28,7 @@ class Pyqglviewer < Formula
     ENV.prepend 'PYTHONPATH', 
                 "#{HOMEBREW_PREFIX}/lib/#{which_python}/site-packages", ':'
 
-    system 'python', 'configure.py', "-Q", "#{HOMEBREW_PREFIX}/include",
+    system 'python', 'configure.py', "-f", `brew --prefix libqglviewer`.strip(),
            '-I', '/usr/X11/include',
            "--module-install-path=#{lib}/#{which_python}/site-packages"
     system 'make'
