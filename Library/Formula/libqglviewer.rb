@@ -22,7 +22,7 @@ class Libqglviewer < Formula
   end
 
   def install
-    args = ["PREFIX=#{prefix}"]
+    args = ["PREFIX=#{lib}"]
 
     if ARGV.include? '--universal'
       args << "CONFIG += x86 x86_64"
@@ -32,12 +32,13 @@ class Libqglviewer < Formula
       system "qmake", *args
       system "make"
     end
+
   end
 
   def caveats
      <<-EOS.undent
       To avoid issues with runtime linking and facilitate usage of the library:
-        sudo ln -s "#{prefix}/QGLViewer.framework" "/Library/Frameworks/QGLViewer.framework"
+        sudo ln -s "#{lib}/QGLViewer.framework" "/Library/Frameworks/QGLViewer.framework"
     EOS
   end
 end

@@ -28,7 +28,7 @@ class Pyqglviewer < Formula
     ENV.prepend 'PYTHONPATH', 
                 "#{HOMEBREW_PREFIX}/lib/#{which_python}/site-packages", ':'
 
-    system 'python', 'configure.py', "-f", `brew --prefix libqglviewer`.strip(),
+    system 'python', 'configure.py', "-f", "#{HOMEBREW_PREFIX}/lib",
            '-I', '/usr/X11/include',
            "--module-install-path=#{lib}/#{which_python}/site-packages"
     system 'make'
