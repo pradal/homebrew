@@ -4,7 +4,7 @@ class Pyqglviewer < Formula
   homepage 'http://pyqglviewer.gforge.inria.fr/'
 
   url   'https://gforge.inria.fr/frs/download.php/30908/PyQGLViewer-0.11.zip'
-  md5   'cc7d847989fd6af9ac51736cec864e4b'
+  sha1   '3730c6ab19bc8cd7b6769fb67e20d8e20bda99aa'
 
   depends_on 'pyqt'
   depends_on 'sip'

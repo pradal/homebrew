@@ -7,7 +7,7 @@ class Libqglviewer < Formula
     md5 'e5b358a5af2e8aeeab91021770b10211'
 =end 
   url   'https://gforge.inria.fr/frs/download.php/30907/libQGLViewer-2.3.17-py.tgz'
-  md5 '75bc31ba4742d5fd9ddf5abba3bfa532'
+  sha1 '4b0decda9ffe1df3911bcff0ebbbd32e06d646bd'
 
   depends_on 'qt'
 
